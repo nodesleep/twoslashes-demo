@@ -1,0 +1,22 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import { getCollection } from 'astro:content';
+
+const essays = await getCollection('essays');
+const publishedEssays = essays.filter((essay) => !essay.data.draft);
+---
+
+<DefaultLayout title="TwoSlashes: Essays">
+	<div class="w-full">
+		<h3>Essays</h3>
+        <ul>
+            {publishedEssays.map((essay) => (
+                <li>
+                    <a href={`/essays/${essay.slug}`} class="underline cursor-pointer">
+                        { essay.data.title }
+                    </a>
+                </li>
+            ))}
+        </ul>
+	</div>
+</DefaultLayout>

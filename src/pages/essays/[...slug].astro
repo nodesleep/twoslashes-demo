@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+export async function getStaticPaths() {
+  const entries = await getCollection("essays");
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+
+if (!entry) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await entry.render();
+---
+
+<DefaultLayout title={`TwoSlashes: ${entry.data.title}`}>
+  <div class="flex flex-col">
+    <Content />
+  </div>
+</DefaultLayout>

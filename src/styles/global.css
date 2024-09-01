@@ -1,0 +1,71 @@
+@import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+
+:root {
+  --font-family: "JetBrains Mono", monospace;
+  --font-weight-normal: 500;
+  --font-weight-medium: 600;
+  --font-weight-bold: 800;
+
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-size: 15px;
+}
+
+h1, h2, h3, h4, h5 {
+    @apply font-bold uppercase;
+}
+
+h1 {
+    @apply text-4xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+h3 {
+    @apply text-2xl;
+}
+
+h4 {
+    @apply text-xl;
+}
+
+h5 {
+    @apply text-lg;
+}
+
+p {
+    @apply my-3;
+}
+
+a, a:hover, a:visited, a:active {
+    @apply underline;
+}
+
+nav a, nav a:visited, nav a:active {
+    @apply no-underline;
+} 
+
+ol {
+    @apply list-decimal font-medium p-0 list-inside my-5;
+}
+
+.article-entry h1, h2, h3, h4, h5 {
+    @apply my-3;
+}
+
+.article-entry p,
+ol {
+  @apply leading-7;
+}
+
+.astro-code {
+    @apply p-3 my-5;
+  }
+  
+.note {
+    @apply my-3 text-neutral-300 bg-neutral-950 p-5;
+}
