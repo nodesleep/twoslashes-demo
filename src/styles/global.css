@@ -59,7 +59,7 @@ ol {
 
 .article-entry p,
 ol {
-  @apply leading-7;
+  @apply leading-7 text-neutral-600 dark:text-neutral-400;
 }
 
 .astro-code {
