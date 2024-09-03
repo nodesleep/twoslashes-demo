@@ -4,17 +4,16 @@ pubDate: 2024-07-29
 description: "Who needs the triangle company?"
 category: "Programming"
 author: "Aron Sweet"
-tags: ["programming", "hosting", "vercel", "netflify", "digitalocean"]
+tags: ["Programming", "Hosting", "Vercel", "Netflify", "Digitalocean"]
 draft: false
 ---
+import ArticleTable from '../../components/ArticleTable.astro'
 
-## Self-Hosting Your Node Application
+<ArticleTable title={frontmatter.title} sub={frontmatter.description} version="1.0.0" date={frontmatter.pubDate} url="https://twoslashes.dev" author={frontmatter.author} />
 
-I've been seeing a lot of talk about the concept of self-hosting in the context of
-it being a lost art; even questionable not to. The recent horror stories around a
-change in fee structure as well as developers waking up to emails of the hosting company requiring
-a tidy sum overnight when their website received some unexpected traffic has prompted many
-to explore the idea of self-hosting; with some even claiming that if you don't self-host, it's a big skill issue.
+
+
+I've been seeing a lot of talk about the concept of self-hosting in the context of it being a lost art; even questionable not to. The recent horror stories around a change in fee structure as well as developers waking up to emails of the hosting company requiring a tidy sum overnight when their website received some unexpected traffic has prompted many to explore the idea of self-hosting; with some even claiming that if you don't self-host, it's a big skill issue.
 
 Great news, it's really easy. In this blog, I intend to show you how to:
 

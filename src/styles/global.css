@@ -38,7 +38,7 @@ h5 {
 }
 
 p {
-    @apply my-3;
+    @apply mb-3 break-words text-wrap hyphens-auto;
 }
 
 a, a:hover, a:visited, a:active {
@@ -57,15 +57,45 @@ ol {
     @apply my-3;
 }
 
+.article-entry table h1 {
+    @apply my-0;
+}
+
 .article-entry p,
 ol {
   @apply leading-7 text-neutral-600 dark:text-neutral-400;
 }
 
+.article-entry code {
+    @apply font-bold;
+}
+
 .astro-code {
     @apply p-3 my-5;
-  }
+}
   
 .note {
     @apply my-3 text-neutral-300 bg-neutral-950 p-5;
+}
+
+
+table {
+    @apply w-full border-collapse mb-5
+  }
+  
+th, td {
+@apply border-2 border-black dark:border-white px-6 py-2 align-top text-left;
+}
+table tbody tr:first-child > * {
+@apply pt-2;
+}
+
+th {
+@apply font-bold;
+}
+.width-min {
+@apply w-0;
+}
+.width-auto {
+@apply w-full;
 }

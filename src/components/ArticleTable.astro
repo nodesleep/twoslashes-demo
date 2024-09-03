@@ -1,0 +1,36 @@
+---
+const props = Astro.props;
+
+export const format = (date) => {
+  return new Date(date).toLocaleDateString("en-US", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
+};
+---
+
+<table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <h1 class="title">{props.title}</h1>
+      <span class="subtitle">{props.sub}</span>
+    </td>
+    <th>Version</th>
+    <td class="width-min">{props.version}</td>
+  </tr>
+  <tr>
+    <th>Updated</th>
+    <td class="width-min"
+      ><time style="white-space: pre;">{format(props.date)}</time></td
+    >
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"
+      ><a href={props.url}><cite>{props.author}</cite></a></td
+    >
+    <th class="width-min">License</th>
+    <td class="text-sm">CC BY-NC-ND</td>
+  </tr>
+</table>
