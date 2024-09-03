@@ -14,7 +14,7 @@ nav ul {
 
 ul {
   @apply list-inside;
-  list-style: list-square;
+  list-style-type: square;
 }
 
 .tree, .tree ul {

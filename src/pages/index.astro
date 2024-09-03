@@ -8,11 +8,56 @@ const age = year - birthYear;
 ---
 
 <DefaultLayout title="TwoSlashes: Home">
-  <div class="w-full">
-    <div class="mb-10">
+  <div class="flex w-full gap-0 md:gap-10">
+    <div class="md:flex flex-col w-1/5 hidden">
       <h5>Overview</h5>
+      <ul>
+        <li>Name is Aron</li>
+        <li>{age} years old</li>
+        <li>MaSc. in progress</li>
+        <li>Keeper of Beard</li>
+        <li>Frontend Expert</li>
+        <li>Backend Okay</li>
+        <li>Loves Go + HTMX</li>
+      </ul>
+      <h5>Interests</h5>
+      <ul>
+        <li>Astronomy</li>
+        <li>Hypermedia</li>
+        <li>Programming</li>
+        <li>Psychology</li>
+        <li>Reading</li>
+        <li>Research</li>
+        <li>Science</li>
+        <li>Songwriting</li>
+      </ul>
+      <h5>Languages</h5>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>Golang</li>
+        <li>JS/TS</li>
+        <li>Python</li>
+      </ul>
+      <h5>Attribution</h5>
+      <ul>
+        <li>
+          <a href="https://astro.build">Astro</a>
+        </li>
+        <li>
+          <a href="https://tailwindcss.com">Tailwindcss</a>
+        </li>
+        <li>
+          <a href="https://owickstrom.github.io/the-monospace-web"
+            >The Monospace Web</a
+          >
+        </li>
+        <li>
+          <a href="https://astro.build">Source Code</a>
+        </li>
+      </ul>
+      <h5>&copy; {year}</h5>
     </div>
-    <div>
+    <div class="flex flex-col w-full md:w-4/5">
       <h5>Introduction</h5>
       <p>
         Currently, I am pursuing a Master of Science in
@@ -30,61 +75,61 @@ const age = year - birthYear;
           target="_blank">Psychology</a
         > from the International Open University.
       </p>
+      <p>
+        Prior to beginning graduate school, I spent nearly two decades as a
+        software engineer in Silicon Valley, Startups, and Freelancing. I've
+        created tools and companies to improve social media interactions and
+        formed companies dedicated to Open Source; including OpenTeknik, the
+        company responsible for the creation and ongoing maintenance of the <a
+          href="https://www.opensource-socialnetwork.org/"
+          target="_blank">Open Source Social Network</a
+        >. I worked as an engineer for Apple, transitioning the MobileMe
+        platform to what we call iCloud today. My most recent professional
+        project being a fullstack developer for DFN Freight Exchange, where I
+        joined the team and spearheaded development of <a
+          href="https://www.dfnfreight.com/"
+          target="_blank">DFNX</a
+        >, their flagship freight exchange application built using TypeScript
+        and Vue 3.
+      </p>
+      <p>
+        My work has ranged from software engineering, to fullstack, to ui
+        design. I&apos;ve worked as a consultant, contractor, and freelancer in
+        all of these areas of expertise under my own LLC; building complex and
+        robust web applications using JavaScript Frameworks. For the last year
+        and a half, I&apos;ve been focused on my education and learning new
+        languages; taking a special interest in Golang for systems programming
+        and HTMX, the <a href="https://hypermedia.systems/" target="_blank"
+          >Hypermedia library</a
+        >. Paired together, they do an extremely wonderful job of eliminating
+        the bloat that SPAs carry with them when used for the wrong application.
+      </p>
+      <p>
+        I&apos;ve also become increasingly fond of <a
+          href="https://astro.build"
+          target="_blank">Astro</a
+        >. This website was made using Astro and Tailwindcss. You can view the
+        source code <a
+          href="https://github.com/nodesleep/twoslashes"
+          target="_blank">here</a
+        >.
+      </p>
+      <p>
+        I&apos;m passionate about creating music, astronomy, space travel,
+        psychology, and meteorology. I am the creator and maintainer of <a
+          href="https://tornadotrax.com"
+          target="_blank">TornadoTrax</a
+        >, an application that shows the damage paths of US tornadoes between
+        1950-2022. It includes valuable analytics assisting researchers and
+        enthusiasts alike.
+      </p>
+      <p>
+        I&apos;m always open to new opportunities and love discussing
+        technology. If you find me on Twitter, you&apos;ll see I am very much
+        communicative and posting regularly; typically engaging in the memes
+        from HTMX or ranting with other engineers about the common stuff
+        you&apos;d hear at the water cooler.
+      </p>
     </div>
-    <p>
-      Prior to beginning graduate school, I spent nearly two decades as a
-      software engineer in Silicon Valley, Startups, and Freelancing. I've
-      created tools and companies to improve social media interactions and
-      formed companies dedicated to Open Source; including OpenTeknik, the
-      company responsible for the creation and ongoing maintenance of the <a
-        href="https://www.opensource-socialnetwork.org/"
-        target="_blank">Open Source Social Network</a
-      >. I worked as an engineer for Apple, transitioning the MobileMe platform
-      to what we call iCloud today. My most recent professional project being a
-      fullstack developer for DFN Freight Exchange, where I joined the team and
-      spearheaded development of <a
-        href="https://www.dfnfreight.com/"
-        target="_blank">DFNX</a
-      >, their flagship freight exchange application built using TypeScript and
-      Vue 3.
-    </p>
-    <p>
-      My work has ranged from software engineering, to fullstack, to ui design.
-      I&apos;ve worked as a consultant, contractor, and freelancer in all of
-      these areas of expertise under my own LLC; building complex and robust web
-      applications using JavaScript Frameworks. For the last year and a half,
-      I&apos;ve been focused on my education and learning new languages; taking
-      a special interest in Golang for systems programming and HTMX, the <a
-        href="https://hypermedia.systems/"
-        target="_blank">Hypermedia library</a
-      >. Paired together, they do an extremely wonderful job of eliminating the
-      bloat that SPAs carry with them when used for the wrong application.
-    </p>
-    <p>
-      I&apos;ve also become increasingly fond of <a
-        href="https://astro.build"
-        target="_blank">Astro</a
-      >. This website was made using Astro and Tailwindcss. You can view the
-      source code <a
-        href="https://github.com/nodesleep/twoslashes"
-        target="_blank">here</a
-      >.
-    </p>
-    <p>
-      I&apos;m passionate about creating music, astronomy, space travel,
-      psychology, and meteorology. I am the creator and maintainer of <a
-        href="https://tornadotrax.com"
-        target="_blank">TornadoTrax</a
-      >, an application that shows the damage paths of US tornadoes between
-      1950-2022. It includes valuable analytics assisting researchers and
-      enthusiasts alike.
-    </p>
-    <p>
-      I&apos;m always open to new opportunities and love discussing technology.
-      If you find me on Twitter, you&apos;ll see I am very much communicative
-      and posting regularly; typically engaging in the memes from HTMX or
-      ranting with other engineers about the common stuff you&apos;d hear at the
-      water cooler.
-    </p>
   </div>
 </DefaultLayout>
