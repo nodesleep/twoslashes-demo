@@ -38,7 +38,7 @@ h5 {
 }
 
 p {
-    @apply leading-7 mb-3 break-words text-wrap hyphens-auto text-neutral-600 dark:text-neutral-400;
+    @apply leading-7 mb-3 break-words text-wrap hyphens-auto text-black dark:text-white;
 }
 
 a, a:hover, a:visited, a:active {
@@ -62,7 +62,7 @@ figure pre {
 }
 
 .article-entry h1, h2, h3, h4, h5 {
-    @apply my-3;
+    @apply my-6;
 }
 
 .article-entry table h1 {
@@ -71,6 +71,14 @@ figure pre {
 
 .article-entry ol {
   @apply text-neutral-600 dark:text-neutral-400;
+}
+
+.article-entry ul {
+    list-style: square;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .article-entry code {
