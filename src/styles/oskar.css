@@ -1,0 +1,44 @@
+hr {
+  @apply relative block h-[1.20rem] my-[calc(1.20rem_*_1.5)] border-0;
+}
+
+hr:after {
+  @apply block absolute top-[calc(1.20rem_/2_-_2px)] left-0 w-full border-t-[6px] border-double border-black dark:border-white;
+  content: "";
+  height: 0;
+}
+
+nav ul {
+  @apply list-none;
+}
+
+ul {
+  @apply list-inside;
+  list-style: list-square;
+}
+
+.tree, .tree ul {
+  @apply relative pl-0 list-none leading-[1.20rem];
+}
+
+.tree ul {
+  @apply m-0;
+}
+
+.tree ul li {
+  @apply relative pl-[1.5ch] ml-[1.5ch] border-l-[2px] border-black;
+}
+
+.tree ul li:before {
+  @apply absolute block top-[calc(1.20rem/2)] left-0 w-[1ch] border-b-[2px] border-black;
+  content: "";
+}
+
+.tree ul li:last-child {
+  @apply border-l-0;
+}
+
+.tree ul li:last-child:after {
+  @apply absolute block top-0 left-0 h-[calc(1.20rem/2)] border-l-[2px] border-black;
+  content: "";
+}

@@ -10,27 +10,53 @@ export const format = (date) => {
 };
 ---
 
-<table class="header">
+<div class="block md:hidden">
+  <div class="my-5">
+    <table>
+      <thead>
+        <tr>
+          <th class="width-min"> Author </th>
+          <th class="width-auto"> Date </th>
+          <th class="width-min"> Version </th>
+          <th class="width-min"> License </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> <a href={props.url}>{props.author}</a> </td>
+          <td> {format(props.date)} </td>
+          <td> {props.version} </td>
+          <td> CC BY-NC-ND </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <h1>{props.title}</h1>
+            <span class="subtitle">{props.sub}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<table class="header hidden md:block">
   <tr>
-    <td colspan="2" rowspan="2" class="width-auto">
+    <td colspan="2" rowspan="2" class="w-full">
       <h1 class="title">{props.title}</h1>
       <span class="subtitle">{props.sub}</span>
     </td>
     <th>Version</th>
-    <td class="width-min">{props.version}</td>
+    <td class="w-0">{props.version}</td>
   </tr>
   <tr>
     <th>Updated</th>
-    <td class="width-min"
+    <td class="w-0"
       ><time style="white-space: pre;">{format(props.date)}</time></td
     >
   </tr>
   <tr>
-    <th class="width-min">Author</th>
-    <td class="width-auto"
-      ><a href={props.url}><cite>{props.author}</cite></a></td
-    >
-    <th class="width-min">License</th>
+    <th class="w-0">Author</th>
+    <td class="w-full"><a href={props.url}><cite>{props.author}</cite></a></td>
+    <th class="w-0">License</th>
     <td class="text-sm">CC BY-NC-ND</td>
   </tr>
 </table>

@@ -1,16 +1,19 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
+
+const year = new Date().getFullYear();
+const birthYear = 1983;
+
+const age = year - birthYear;
 ---
 
 <DefaultLayout title="TwoSlashes: Home">
-  <div class="w-full md:w-2/5">
-    <img
-      src="avatar.webp"
-      class="w-full border-2 border-black dark:border-white"
-    />
-  </div>
-  <div class="w-full md:w-3/5">
+  <div class="w-full">
+    <div class="mb-10">
+      <h5>Overview</h5>
+    </div>
     <div>
+      <h5>Introduction</h5>
       <p>
         Currently, I am pursuing a Master of Science in
         <a

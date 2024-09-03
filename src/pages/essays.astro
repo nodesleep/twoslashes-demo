@@ -9,7 +9,7 @@ const publishedEssays = essays.filter((essay) => !essay.data.draft);
 <DefaultLayout title="TwoSlashes: Essays">
   <div class="w-full">
     <h3>Essays</h3>
-    <ul class="flex flex-col gap-5">
+    <ul class="flex flex-col gap-5 list-none">
       {
         publishedEssays.map((essay) => (
           <li>
