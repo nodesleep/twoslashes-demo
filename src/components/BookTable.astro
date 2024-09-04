@@ -1,0 +1,53 @@
+---
+const props = Astro.props;
+---
+
+<div class="block md:hidden">
+  <div class="my-5">
+    <table>
+      <thead>
+        <tr>
+          <th class="width-min"> Author </th>
+          <th class="width-auto"> Published </th>
+          <th class="width-min"> Category </th>
+          <th class="width-min"> Link </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> {props.author} </td>
+          <td> {props.printDate} </td>
+          <td> {props.category} </td>
+          <td> <a href={props.amazonUrl}>Amazon</a> </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <h1>{props.title}</h1>
+            <span class="subtitle">{props.description}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<table class="header hidden md:block">
+  <tr>
+    <td colspan="2" rowspan="2" class="w-full">
+      <h1 class="title">{props.title}</h1>
+      <span class="subtitle">{props.description}</span>
+    </td>
+    <th>Category</th>
+    <td class="w-0">{props.category}</td>
+  </tr>
+  <tr>
+    <th>Published</th>
+    <td class="w-0"><time style="white-space: pre;">{props.printDate}</time></td
+    >
+  </tr>
+  <tr>
+    <th class="w-0">Author</th>
+    <td class="w-full">{props.author}</td>
+    <th class="w-0">Link</th>
+    <td class="text-sm"><a href={props.amazonUrl}>Amazon</a></td>
+  </tr>
+</table>

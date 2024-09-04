@@ -1,0 +1,26 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import { getCollection } from "astro:content";
+import BookTable from "../components/BookTable.astro";
+
+const reading = await getCollection("reading");
+const publishedReading = reading.filter((book) => !book.data.draft);
+---
+
+<DefaultLayout title="TwoSlashes: Reading List">
+  <div class="flex flex-col w-full">
+    <h3>Reading List</h3>
+    {
+      publishedReading.map((book) => (
+        <BookTable
+          title={book.data.title}
+          printDate={book.data.printDate}
+          category={book.data.category}
+          amazonUrl={book.data.amazonUrl}
+          description={book.data.description}
+          author={book.data.author}
+        />
+      ))
+    }
+  </div>
+</DefaultLayout>

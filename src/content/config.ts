@@ -10,5 +10,5 @@ const readingListCollection = defineCollection({
 
 export const collections = {
   'essays': essaysCollection,
-  'readingList': readingListCollection,
+  'reading': readingListCollection,
 };
